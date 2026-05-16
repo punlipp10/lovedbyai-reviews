@@ -389,6 +389,24 @@
       font-size: 1em;
       letter-spacing: -0.5px;
     }
+    .star-half {
+      display: inline-block;
+      position: relative;
+      color: var(--star-bg);
+      font-size: 1em;
+      line-height: 1;
+      margin-left: 2px;
+    }
+    .star-half::before {
+      content: '\2605';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 50%;
+      overflow: hidden;
+      color: var(--star);
+      white-space: nowrap;
+    }
     .badge {
       display: inline-flex;
       align-items: center;
@@ -1399,7 +1417,7 @@
             <svg width="12" height="12" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="oklch(67% 0.2 42)"/><text x="12" y="16.5" text-anchor="middle" font-size="10" font-weight="900" fill="white" font-family="Arial">G2</text></svg>
             G2
           </div>
-          <div class="review-stars"><span class="stars">★★★★</span><span style="font-size:18px; color:var(--star-bg);">★</span></div>
+          <div class="review-stars"><span class="stars">★★★★</span><span class="star-half">★</span></div>
           <div class="review-title">&ldquo;AI search stopped feeling like a blackbox&rdquo;</div>
           <div class="review-body">The best part is that LovedByAI gives us a clear view of what is happening with AI search. After setup, we could see that 1,000 pages were optimized and started tracking AI mentions, visitors, crawler activities, and page-level interests.
             <br><br>
@@ -1420,7 +1438,7 @@
             <svg width="12" height="12" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="oklch(67% 0.2 42)"/><text x="12" y="16.5" text-anchor="middle" font-size="10" font-weight="900" fill="white" font-family="Arial">G2</text></svg>
             G2
           </div>
-          <div class="review-stars"><span class="stars">★★★★</span><span style="font-size:18px; color:var(--star-bg);">★</span></div>
+          <div class="review-stars"><span class="stars">★★★★</span><span class="star-half">★</span></div>
           <div class="review-title">&ldquo;Simple way to make our WordPress site more visible in AI search&rdquo;</div>
           <div class="review-body">I like that LovedByAI gives us a practical way to prepare our WordPress site for AI search without rebuilding pages or changing the visible design. The setup was straightforward and beginner-friendly.
             <br><br>
