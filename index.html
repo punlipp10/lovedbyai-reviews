@@ -923,6 +923,7 @@
       margin-bottom: 0;
     }
     .testimonial-large .testimonial-footer { flex-direction: column; align-items: flex-start; }
+    .testimonial-wide { grid-column: span 2; }
 
     /* ─── FAQ ────────────────────────────────────────────── */
     .faq { border-bottom: 1px solid var(--border-subtle); }
@@ -1089,6 +1090,7 @@
       .case-study.reverse { direction: ltr; }
       .testimonials-grid { grid-template-columns: 1fr; }
       .testimonial-large { grid-column: span 1; grid-template-columns: 1fr; }
+      .testimonial-wide { grid-column: span 1; }
       .platform-links-grid { grid-template-columns: repeat(2, 1fr); }
       .nav-links { display: none; }
     }
@@ -1668,7 +1670,7 @@
         </div>
 
         <!-- Testimonial 5 -->
-        <div class="testimonial" style="grid-column:span 2;">
+        <div class="testimonial testimonial-wide">
           <div class="testimonial-stars"><span class="stars">★★★★★</span></div>
           <p class="testimonial-quote">"Within 10 days of installation, we saw 300% more impressions and 400% more traffic from AI search. The analytics dashboard shows you exactly which pages AI is picking up."</p>
           <div class="testimonial-footer">
