@@ -125,14 +125,14 @@ doc = f"""<!DOCTYPE html>
     --brand: oklch(68% 0.22 282);
     --brand-subtle: oklch(24% 0.06 282);
     --text: oklch(93% 0.006 270);
-    --text-muted: oklch(58% 0.012 270);
-    --text-faint: oklch(40% 0.01 270);
+    --text-muted: oklch(74% 0.012 270);
+    --text-faint: oklch(62% 0.01 270);
     --star: oklch(82% 0.18 82);
-    --star-bg: oklch(28% 0.06 82);
-    --wp-blue: oklch(60% 0.18 243);
+    --star-bg: oklch(48% 0.06 82);
+    --wp-blue: oklch(61% 0.17 243);
     --g2-orange: oklch(67% 0.2 42);
     --tp-green: oklch(62% 0.2 153);
-    --google-blue: oklch(58% 0.22 252);
+    --google-blue: oklch(62% 0.20 252);
     --radius: 12px;
     --radius-lg: 20px;
     --font-serif: Georgia, "Palatino Linotype", Palatino, "Book Antiqua", serif;
@@ -219,7 +219,7 @@ doc = f"""<!DOCTYPE html>
     border-top: 1px solid var(--border-subtle);
   }}
   .a-author {{ font-size: 14px; font-weight: 600; }}
-  .a-role {{ font-size: 12.5px; color: var(--text-faint); }}
+  .a-role {{ font-size: 12.5px; color: var(--text-muted); }}
   .a-src {{
     margin-left: auto; font-size: 12px; color: var(--text-muted); text-decoration: none;
     white-space: nowrap;
@@ -227,13 +227,13 @@ doc = f"""<!DOCTYPE html>
   .a-src:hover {{ color: var(--brand); }}
   .a-src-dead {{ color: var(--text-faint); text-decoration: line-through; }}
   .a-meta {{
-    font-size: 11.5px; color: var(--text-faint); text-transform: uppercase;
+    font-size: 11.5px; color: var(--text-muted); text-transform: uppercase;
     letter-spacing: 0.07em; margin-top: 12px;
   }}
 
   footer {{ border-top: 1px solid var(--border-subtle); padding: 40px 0 64px; margin-top: 40px; }}
-  .a-foot-note {{ color: var(--text-faint); font-size: 14px; max-width: 76ch; }}
-  .a-foot-note a {{ color: var(--text-muted); }}
+  .a-foot-note {{ color: var(--text-muted); font-size: 14px; max-width: 76ch; line-height: 1.6; }}
+  .a-foot-note a {{ color: var(--text); text-decoration: underline; text-underline-offset: 2px; }}
   .a-foot-note a:hover {{ color: var(--brand); }}
 
   @media (max-width: 600px) {{
