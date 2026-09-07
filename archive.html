@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Review Archive | LovedByAI Reviews</title>
+<meta name="description" content="Reviews that were once published on lovedbyaireviews.com and have since been removed by their source platform, kept here for transparency.">
+<meta name="robots" content="noindex, follow">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<!-- No Review or AggregateRating structured data on this page by design: these
+     reviews are no longer retrievable at their source, so rating markup for them
+     would not be verifiable. See .claude/skills/review-audit/SKILL.md. -->
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: oklch(11% 0.01 268);
+    --surface: oklch(16% 0.013 270);
+    --border: oklch(30% 0.02 270);
+    --border-subtle: oklch(24% 0.015 270);
+    --brand: oklch(68% 0.22 282);
+    --brand-subtle: oklch(24% 0.06 282);
+    --text: oklch(93% 0.006 270);
+    --text-muted: oklch(58% 0.012 270);
+    --text-faint: oklch(40% 0.01 270);
+    --star: oklch(82% 0.18 82);
+    --star-bg: oklch(28% 0.06 82);
+    --wp-blue: oklch(60% 0.18 243);
+    --g2-orange: oklch(67% 0.2 42);
+    --tp-green: oklch(62% 0.2 153);
+    --google-blue: oklch(58% 0.22 252);
+    --radius: 12px;
+    --radius-lg: 20px;
+    --font-serif: Georgia, "Palatino Linotype", Palatino, "Book Antiqua", serif;
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  body {
+    background: var(--bg); color: var(--text); font-family: var(--font-sans);
+    font-size: 17px; line-height: 1.65; -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+  .stars { display: inline-flex; gap: 2px; color: var(--star); letter-spacing: -0.5px; }
+  .stars-empty { color: var(--star-bg); }
+  .star-half {
+    color: var(--star); position: relative; display: inline-block;
+    background: linear-gradient(90deg, var(--star) 50%, var(--star-bg) 50%);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  }
+
+  nav { border-bottom: 1px solid var(--border-subtle); padding: 20px 0; }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .nav-logo { font-family: var(--font-serif); font-size: 19px; letter-spacing: -0.01em; }
+  .nav-logo span { color: var(--text-faint); }
+  .nav-back {
+    color: var(--text-muted); text-decoration: none; font-size: 14px;
+    border: 1px solid var(--border); border-radius: 999px; padding: 7px 16px;
+    transition: color .2s ease, border-color .2s ease;
+  }
+  .nav-back:hover { color: var(--text); border-color: var(--brand); }
+
+  header.a-hero { padding: 72px 0 48px; border-bottom: 1px solid var(--border-subtle); }
+  .a-label {
+    font-size: 12px; text-transform: uppercase; letter-spacing: 0.09em;
+    color: var(--text-faint); margin-bottom: 18px;
+  }
+  h1 {
+    font-family: var(--font-serif); font-weight: 400; letter-spacing: -0.02em;
+    font-size: clamp(38px, 6vw, 62px); line-height: 1.08; margin-bottom: 22px;
+  }
+  .a-lede { color: var(--text-muted); max-width: 68ch; font-size: 18px; }
+  .a-lede + .a-lede { margin-top: 14px; }
+  .a-lede strong { color: var(--text); font-weight: 600; }
+  .a-stat-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+  .a-stat {
+    background: var(--surface); border: 1px solid var(--border-subtle);
+    border-radius: var(--radius); padding: 14px 20px;
+  }
+  .a-stat-n { font-family: var(--font-serif); font-size: 26px; line-height: 1; }
+  .a-stat-l { font-size: 12px; color: var(--text-faint); text-transform: uppercase;
+               letter-spacing: 0.07em; margin-top: 7px; }
+
+  main { padding: 56px 0 16px; }
+  .a-group { margin-bottom: 68px; }
+  .a-group-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 10px; }
+  .a-group-title { font-family: var(--font-serif); font-weight: 400; font-size: 30px;
+                    letter-spacing: -0.01em; }
+  .a-group-count {
+    font-size: 12px; color: var(--text-faint); text-transform: uppercase;
+    letter-spacing: 0.07em; border: 1px solid var(--border); border-radius: 999px;
+    padding: 3px 11px;
+  }
+  .a-group-why { color: var(--text-muted); font-size: 15px; max-width: 72ch; margin-bottom: 26px; }
+  .a-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 20px; }
+
+  .a-card {
+    background: var(--surface); border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg); padding: 26px; display: flex; flex-direction: column;
+  }
+  .a-tag {
+    display: inline-flex; align-items: center; gap: 7px; align-self: flex-start;
+    font-size: 12px; text-transform: uppercase; letter-spacing: 0.07em;
+    color: var(--text-faint); margin-bottom: 14px;
+  }
+  .a-tag .tag-icon { width: 15px; height: 15px; object-fit: contain; opacity: .75; }
+  .a-card.wp { border-top: 1px solid color-mix(in oklch, var(--wp-blue) 35%, var(--border-subtle)); }
+  .a-card.g2 { border-top: 1px solid color-mix(in oklch, var(--g2-orange) 35%, var(--border-subtle)); }
+  .a-card.tp { border-top: 1px solid color-mix(in oklch, var(--tp-green) 35%, var(--border-subtle)); }
+  .a-card.web { border-top: 1px solid color-mix(in oklch, var(--brand) 35%, var(--border-subtle)); }
+  .a-stars { font-size: 15px; margin-bottom: 12px; }
+  .a-title { font-family: var(--font-serif); font-size: 19px; line-height: 1.3; margin-bottom: 12px; }
+  .a-body { color: var(--text-muted); font-size: 15.5px; }
+  .a-body p + p { margin-top: 12px; }
+  .a-foot {
+    display: flex; align-items: center; gap: 12px; margin-top: 22px; padding-top: 18px;
+    border-top: 1px solid var(--border-subtle);
+  }
+  .a-author { font-size: 14px; font-weight: 600; }
+  .a-role { font-size: 12.5px; color: var(--text-faint); }
+  .a-src {
+    margin-left: auto; font-size: 12px; color: var(--text-muted); text-decoration: none;
+    white-space: nowrap;
+  }
+  .a-src:hover { color: var(--brand); }
+  .a-src-dead { color: var(--text-faint); text-decoration: line-through; }
+  .a-meta {
+    font-size: 11.5px; color: var(--text-faint); text-transform: uppercase;
+    letter-spacing: 0.07em; margin-top: 12px;
+  }
+
+  footer { border-top: 1px solid var(--border-subtle); padding: 40px 0 64px; margin-top: 40px; }
+  .a-foot-note { color: var(--text-faint); font-size: 14px; max-width: 76ch; }
+  .a-foot-note a { color: var(--text-muted); }
+  .a-foot-note a:hover { color: var(--brand); }
+
+  @media (max-width: 600px) {
+    header.a-hero { padding: 48px 0 36px; }
+    .a-grid { grid-template-columns: 1fr; }
+    .a-card { padding: 22px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <div class="nav-logo">LovedByAI <span>Reviews</span></div>
+    <a href="index.html" class="nav-back">&larr; Back to reviews</a>
+  </div>
+</nav>
+
+<header class="a-hero">
+  <div class="container">
+    <div class="a-label">Review Archive</div>
+    <h1>Reviews that are no longer at their source.</h1>
+    <p class="a-lede">This page holds every review this site once published that has since
+      been removed by the platform it was posted on. Nothing here is counted in any score
+      shown on the main page, and none of it carries rating markup, because none of it can
+      be checked at source any more.</p>
+    <p class="a-lede">It is kept because deleting it would be the dishonest option. A review
+      aggregator that quietly drops reviews when they vanish is telling you only the half of
+      the story that flatters it.</p>
+    <div class="a-stat-row">
+      <div class="a-stat"><div class="a-stat-n">9</div><div class="a-stat-l">Reviews archived</div></div>
+      <div class="a-stat"><div class="a-stat-n">4</div><div class="a-stat-l">Platforms affected</div></div>
+      <div class="a-stat"><div class="a-stat-n">2026-09-07</div><div class="a-stat-l">Last audited</div></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+      <section class="a-group">
+        <div class="a-group-head">
+          <h2 class="a-group-title">WordPress.org</h2>
+          <div class="a-group-count">6 delisted</div>
+        </div>
+        <p class="a-group-why">Removed by WordPress.org. Each source URL below returns 404. WordPress.org moderates plugin reviews and does not notify plugin authors when it removes one.</p>
+        <div class="a-grid">
+        <article class="a-card wp">
+          <div class="a-tag wp"><img class="tag-icon" src="review-logos/wordpress-logo.png" alt="WordPress.org">WordPress.org</div>
+          <div class="a-stars"><span class="stars">★★★★★</span><span class="stars stars-empty"></span></div>
+          <div class="a-title">&ldquo;My favorite plugin&rdquo;</div>
+          <div class="a-body">
+            <p>I've been working with LovedByAI to help my business become more discoverable through AI and search, and the results have been outstanding. They combine deep technical knowledge with a rare ability to explain things in plain language. Instead of drowning me in jargon, they guided me step by step through what really matters for AI visibility, structured data, and SEO.</p>
+            <p>What I appreciate most is how thoughtful and proactive they are. They don't just "optimize" and disappear — they look at my entire online presence, anticipate what I'll need next, and come back with clear, prioritized recommendations I can actually implement.</p>
+            <p>If you're serious about being found in an AI-driven world — and you want a partner who is both strategic and genuinely kind to work with — I HIGHLY recommend LovedByAI!</p>
+          </div>
+          <footer class="a-foot">
+            <div>
+              <div class="a-author">Crista Cloutier</div>
+              <div class="a-role">Owner, The Working Artist</div>
+            </div>
+            <span class="a-src a-src-dead">source removed (404)</span>
+          </footer>
+          <div class="a-meta">Delisted 2026-09-07</div>
+        </article>
+        <article class="a-card wp">
+          <div class="a-tag wp"><img class="tag-icon" src="review-logos/wordpress-logo.png" alt="WordPress.org">WordPress.org</div>
+          <div class="a-stars"><span class="stars">★★★★★</span><span class="stars stars-empty"></span></div>
+          <div class="a-title">&ldquo;A game-changer for modern PR&rdquo;</div>
+          <div class="a-body">
+            <p>I installed LovedByAI expecting basic SEO tools, but I was completely blown away. I was incredibly impressed to see you can actually track AI citations and the resulting traffic coming directly to your website.</p>
+            <p>It is so insightful seeing that data broken down per page, knowing exactly which of our press releases and articles are being referenced by generative engines. It even shows which LLM model is surfacing my content and driving the traffic.</p>
+            <p>Clearly, it was made by digital marketers for digital marketers. I highly recommend it — give it a try!</p>
+          </div>
+          <footer class="a-foot">
+            <div>
+              <div class="a-author">Looking Glass PR</div>
+              <div class="a-role">Digital PR Agency</div>
+            </div>
+            <span class="a-src a-src-dead">source removed (404)</span>
+          </footer>
+          <div class="a-meta">Delisted 2026-09-07</div>
+        </article>
+        <article class="a-card wp">
+          <div class="a-tag wp"><img class="tag-icon" src="review-logos/wordpress-logo.png" alt="WordPress.org">WordPress.org</div>
+          <div class="a-stars"><span class="stars">★★★★★</span><span class="stars stars-empty"></span></div>
+          <div class="a-title">&ldquo;The best GEO for people who hate doing GEO&rdquo;</div>
+          <div class="a-body">
+            <p>I'm lazy and I didn't have the energy to migrate my site to GEO so it would fit all the new LLMs — Gemini, Claude, Perplexity, ChatGPT. I wanted an easy solution. Something that wouldn't require me to do anything.</p>
+            <p>I'm shocked by the results. In the last 90 days I've had a 450% increase in impressions. And I've already gotten a few clients who came through AI chats.</p>
+            <p>Bottom line: if you want leads without lifting a finger — this is it.</p>
+          </div>
+          <footer class="a-foot">
+            <div>
+              <div class="a-author">Emil Roze</div>
+              <div class="a-role">WordPress Site Owner</div>
+            </div>
+            <span class="a-src a-src-dead">source removed (404)</span>
+          </footer>
+          <div class="a-meta">Delisted 2026-09-07</div>
+        </article>
+        <article class="a-card wp">
+          <div class="a-tag wp"><img class="tag-icon" src="review-logos/wordpress-logo.png" alt="WordPress.org">WordPress.org</div>
+          <div class="a-stars"><span class="stars">★★★★★</span><span class="stars stars-empty"></span></div>
+          <div class="a-title">&ldquo;An SEO/GEO tool built for the new era of search&rdquo;</div>
+          <div class="a-body">
+            <p>AI search isn't going away, and most websites aren't built for it. LovedByAI fills that gap without touching anything you've already built, by adding a machine-readable layer that LLMs like ChatGPT, Claude, and Perplexity can actually see, while your site looks and works exactly the same for humans.</p>
+            <p>What makes it genuinely useful is the analytics dashboard. AI traffic has always been a black box: you rarely know if bots are crawling you, citing you, or ignoring you entirely. This changes that. You can see which AI systems are visiting, how often, and whether that's translating into citations. That kind of visibility is rare.</p>
+            <p>If you're serious about staying visible as search shifts toward AI-generated answers, this is worth adding now rather than scrambling to catch up later.</p>
+          </div>
+          <footer class="a-foot">
+            <div>
+              <div class="a-author">Andre Guelmann</div>
+              <div class="a-role">andreguelmann.com</div>
+            </div>
+            <span class="a-src a-src-dead">source removed (404)</span>
+          </footer>
+          <div class="a-meta">Delisted 2026-09-07</div>
+        </article>
+        <article class="a-card wp">
+          <div class="a-tag wp"><img class="tag-icon" src="review-logos/wordpress-logo.png" alt="WordPress.org">WordPress.org</div>
+          <div class="a-stars"><span class="stars">★★★★★</span><span class="stars stars-empty"></span></div>
+          <div class="a-title">&ldquo;Real Growth Without Extra Work&rdquo;</div>
+          <div class="a-body">
+            <p>After I installed LovedByAI, my site's popularity grew by 77% and I didn't even change anything. The setup was simple, it runs smoothly in the background, and I saw noticeable improvements in engagement within weeks.</p>
+            <p>No complicated configuration, no extra workload. If you're looking for real results without constant tweaking, this plugin delivers. Highly recommended.</p>
+          </div>
+          <footer class="a-foot">
+            <div>
+              <div class="a-author">Inbar Rotshild</div>
+              <div class="a-role">Content Creator</div>
+            </div>
+            <span class="a-src a-src-dead">source removed (404)</span>
+          </footer>
+          <div class="a-meta">Delisted 2026-09-07</div>
+        </article>
+        <article class="a-card wp">
+          <div class="a-tag wp"><img class="tag-icon" src="review-logos/wordpress-logo.png" alt="WordPress.org">WordPress.org</div>
+          <div class="a-stars"><span class="stars">★★★★★</span><span class="stars stars-empty"></span></div>
+          <div class="a-title">&ldquo;Very useful plugin with promising results&rdquo;</div>
+          <div class="a-body">
+            <p>Thanks to this plugin, I've gone from just 1 mention in its first two weeks to 9 mentions in the last two. The numbers are still modest, but the progress is very encouraging. It's already making a noticeable difference on Blogpocket.es.</p>
+            <p>Very useful plugin and definitely worth trying if you want to improve visibility in AI search.</p>
+          </div>
+          <footer class="a-foot">
+            <div>
+              <div class="a-author">Antonio Cambronero</div>
+              <div class="a-role">Blogpocket.es</div>
+            </div>
+            <span class="a-src a-src-dead">source removed (404)</span>
+          </footer>
+          <div class="a-meta">Delisted 2026-09-07</div>
+        </article>
+        </div>
+      </section>
+      <section class="a-group">
+        <div class="a-group-head">
+          <h2 class="a-group-title">G2</h2>
+          <div class="a-group-count">1 delisted</div>
+        </div>
+        <p class="a-group-why">No longer listed among the reviews G2 shows for the product.</p>
+        <div class="a-grid">
+        <article class="a-card g2">
+          <div class="a-tag g2"><img class="tag-icon" src="review-logos/g2-logo.png" alt="G2">G2</div>
+          <div class="a-stars"><span class="stars">★★★★★</span><span class="stars stars-empty"></span></div>
+          <div class="a-title">&ldquo;Finally a way to track AI visibility without guessing&rdquo;</div>
+          <div class="a-body">
+            <p>LovedByAI makes AI visibility feel measurable instead of theoretical because it uses my actual data. We fully optimized 49 pages, and the dashboard started giving us clear signals. We were able to track AI mentions, search and AI engine interest, and even which crawlers were actively visiting the site.</p>
+            <p>One thing I found especially useful was seeing actual crawler activity from tools like GPTBot, ClaudeBot, and Bytespider. In our case, we saw over 5,000 crawler visits in a 30-day period — real confidence that our content was being discovered and processed.</p>
+            <p>It felt lightweight to implement, but still gave us meaningful visibility.</p>
+          </div>
+          <footer class="a-foot">
+            <div>
+              <div class="a-author">Pallav A.</div>
+              <div class="a-role">SEO — Small Business</div>
+            </div>
+            <a href="https://www.g2.com/products/lovedbyai-geo-for-wordpress/reviews" target="_blank" rel="noopener" class="a-src">G2 &#8599;</a>
+          </footer>
+          <div class="a-meta">Delisted 2026-09-07</div>
+        </article>
+        </div>
+      </section>
+      <section class="a-group">
+        <div class="a-group-head">
+          <h2 class="a-group-title">Trustpilot</h2>
+          <div class="a-group-count">1 delisted</div>
+        </div>
+        <p class="a-group-why">No longer listed among the reviews Trustpilot shows for lovedby.ai.</p>
+        <div class="a-grid">
+        <article class="a-card tp">
+          <div class="a-tag tp"><img class="tag-icon" src="review-logos/trustpilot-logo.png" alt="Trustpilot">Trustpilot</div>
+          <div class="a-stars"><span class="stars">★★★★★</span><span class="stars stars-empty"></span></div>
+          <div class="a-title">&ldquo;Insights I wasn’t getting from my existing tools&rdquo;</div>
+          <div class="a-body">
+            <p>I started testing LovedByAI to get a better understanding of how my website was being interpreted by AI-driven search platforms. One thing I appreciated was having visibility into areas that most traditional SEO tools don’t cover, such as AI crawler activity, content mentions, and page-level optimization opportunities.</p>
+            <p>The setup process was straightforward, and the dashboard made it easy to identify which pages might need additional improvements. Overall, my experience has been positive. The platform gave me insights into AI search visibility that I wasn’t getting from my existing tools.</p>
+          </div>
+          <footer class="a-foot">
+            <div>
+              <div class="a-author">Sedlak Garges</div>
+              <div class="a-role">Unprompted</div>
+            </div>
+            <a href="https://www.trustpilot.com/review/lovedby.ai" target="_blank" rel="noopener" class="a-src">Trustpilot &#8599;</a>
+          </footer>
+          <div class="a-meta">Delisted 2026-09-07</div>
+        </article>
+        </div>
+      </section>
+      <section class="a-group">
+        <div class="a-group-head">
+          <h2 class="a-group-title">Website</h2>
+          <div class="a-group-count">1 delisted</div>
+        </div>
+        <p class="a-group-why">No longer published on lovedby.ai.</p>
+        <div class="a-grid">
+        <article class="a-card web">
+          <div class="a-tag web">Website</div>
+          
+          
+          <div class="a-body">
+            <p>"I'm no 'LLM expert.' I just installed the plugin, forgot about it, and suddenly started seeing a huge traffic lift."</p>
+          </div>
+          <footer class="a-foot">
+            <div>
+              <div class="a-author">Sarah Jackson</div>
+              <div class="a-role">Blog Writer</div>
+            </div>
+            <a href="https://www.lovedby.ai/" target="_blank" rel="noopener" class="a-src">Website &#8599;</a>
+          </footer>
+          <div class="a-meta">Delisted 2026-09-07</div>
+        </article>
+        </div>
+      </section>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p class="a-foot-note">Review text is reproduced as it was published on this site, which
+      for the WordPress.org entries is now the only surviving record of it. Scores and counts
+      on the <a href="index.html">main reviews page</a> reflect only reviews that are live at
+      their source today. Audited every two weeks. Visit
+      <a href="https://www.lovedby.ai" target="_blank" rel="noopener">www.lovedby.ai</a> to learn more.</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -34,8 +34,34 @@ Authoritative, honest, editorial. Not a sales page — a reference. Should feel 
 - Full Schema.org structured data (SoftwareApplication, AggregateRating, Review, FAQPage)
 
 ## Key Stats
-- 5/5 stars on WordPress.org (6 reviews, all 5-star)
-- 500+ active WordPress installations
-- 927 WordPress sites total
+
+`reviews.json` is the source of truth for every score and count on the site. Do not
+copy figures out of it into here or into `index.html` by hand: run
+`python3 scripts/audit_reviews.py` (or the `/review-audit` skill) and let the audit
+tell you what the sources say today. The numbers below are a snapshot from the
+2026-09-07 audit, kept only for orientation.
+
+- WordPress.org: 4.4/5 from 5 ratings (4 five-star, 1 two-star)
+- G2: 4.7/5 from 3 reviews
+- Trustpilot: 4/5 TrustScore from 4 reviews (weighted, not a plain average)
+- lovedby.ai: 5 published testimonials, unrated
+- Google Business Profile: 5/5 from 4 ratings, reported last and excluded from the scorecard row
+- 1,000 active WordPress installations, plugin v1.7.28
 - Featured in Forbes, WP Weekly, WordPress.org
-- Average reported result: 217% AI traffic increase
+
+## Review integrity
+
+Reviews get deleted by the platforms that host them. The 2026-09-07 audit found all six
+WordPress.org reviews the site had been quoting returned 404, and single reviews
+had vanished from G2, Trustpilot and lovedby.ai. That is normal churn plus
+platform moderation, not a bug, and it is why the site runs on a ledger:
+
+- A review that disappears from its source moves to `archive.html` with the date
+  it went. It is never deleted, because after a source 404s this site holds the
+  only surviving copy of the text.
+- Scores shown on the main page only ever count reviews that are live at source.
+- `archive.html` carries no rating structured data, since none of it can be
+  verified any more.
+- Reviews that are live but not quotable (a two-star review, a five-star entry
+  whose text is an unrelated complaint) still count toward the published score.
+  Removing them from the score would be dishonest; quoting them would be silly.
