@@ -146,12 +146,12 @@
         },
         "aggregateRating": {
           "@type": "AggregateRating",
-          "ratingValue": "4.4",
+          "ratingValue": "4.8",
           "bestRating": "5",
           "worstRating": "1",
-          "ratingCount": "5",
-          "reviewCount": "5",
-          "url": "https://wordpress.org/plugins/lovedbyai-seo-for-llms-and-ai-search/reviews/"
+          "ratingCount": "16",
+          "reviewCount": "16",
+          "url": "https://www.lovedbyaireviews.com/"
         },
         "review": [
           {
@@ -441,6 +441,30 @@
       line-height: 1.6;
       margin-bottom: 40px;
     }
+    .overall-rating {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+    .overall-score {
+      font-size: 52px;
+      font-weight: 700;
+      line-height: 1;
+      color: var(--brand);
+    }
+    .overall-detail { flex: 1; min-width: 260px; }
+    .overall-detail p {
+      margin: 8px 0 0;
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--text-muted);
+    }
+    .overall-detail p strong { color: var(--text); }
     .hero-rating-bar {
       display: flex;
       align-items: center;
@@ -1092,10 +1116,10 @@
       <p class="hero-sub">What customers across WordPress.org, G2, Trustpilot and Google are saying about the WordPress plugin for AI search visibility. Every score here is checked against its source every two weeks, and reviews that get removed move to the <a href="archive.html" style="color:var(--brand);">archive</a> instead of quietly disappearing.</p>
 
       <div class="hero-rating-bar">
-        <div class="hero-rating-score">4.4</div>
+        <div class="hero-rating-score">4.8</div>
         <div class="hero-rating-detail">
-          <div><span class="stars">★★★★</span><span class="stars stars-empty">★</span></div>
-          <p>5 ratings on WordPress.org &mdash; 4 five-star, 1 two-star</p>
+          <div><span class="stars">★★★★★</span></div>
+          <p>16 reviews across WordPress.org, G2, Trustpilot and Google</p>
         </div>
         <div class="hero-divider"></div>
         <div style="font-size:14px; color:var(--text-muted); line-height:1.5;">
@@ -1153,17 +1177,23 @@
           <div class="platform-link-label">Read all reviews <span class="arrow">→</span></div>
         </a>
 
-        <a href="https://www.lovedby.ai/" target="_blank" rel="noopener" class="platform-card web fade-up" style="transition-delay:0.24s">
+        <a href="https://share.google/zmxeJ5ihi3bJ7j5s5" target="_blank" rel="noopener" class="platform-card gm fade-up" style="transition-delay:0.24s">
           <div class="platform-badge-row">
-            <span class="platform-name">lovedby.ai</span>
-            
+            <span class="platform-name">Google</span>
+            <img class="platform-icon" src="review-logos/google-logo.png" alt="Google">
           </div>
           <div class="platform-score">5</div>
-          <div class="platform-scorenote">Testimonials &mdash; not rated</div>
-          <div class="platform-count">5 published testimonials &mdash; first-party</div>
-          <div class="platform-link-label">View testimonials <span class="arrow">→</span></div>
+          <div class="platform-stars"><span class="stars" style="font-size:16px;">★★★★★</span></div>
+          <div class="platform-count">4 ratings &mdash; Business Profile</div>
+          <div class="platform-link-label">Read all reviews <span class="arrow">→</span></div>
         </a>
 
+      </div>
+
+      <div class="overall-rating">
+        <div class="overall-detail">
+          <p><strong>How the overall 4.8 is calculated.</strong> Every independent review across WordPress.org, G2, Trustpilot and Google counted once at the star rating its own author gave it &mdash; 4&times;5 and 1&times;2 on WordPress.org, 4.5 / 4.5 / 5 on G2, 4&times;5 on Trustpilot and 4&times;5 on Google. That is a straight average (76 &divide; 16 = 4.75), not a platform&rsquo;s weighted score: Trustpilot publishes 4.0 even though all four of its reviews are five-star. The 5 testimonials on lovedby.ai are first-party, so they are excluded from this number entirely.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -1705,7 +1735,7 @@
       <div class="section-header fade-up">
         <div class="section-label">Google &mdash; Business Profile</div>
         <h2 class="section-title">5/5 on Google.</h2>
-        <p class="section-desc">LovedByAI reviews on the Google Business Profile. Google counts ratings left without any written text, so the profile shows 4 ratings while 3 carry a review to quote. Google sits outside the scorecard at the top of this page: a local business listing is not the same kind of evidence as a software review platform, so it is reported here on its own terms.</p>
+        <p class="section-desc">LovedByAI reviews on the Google Business Profile. Google counts ratings left without any written text, so the profile shows 4 ratings while 3 carry a review to quote. Google&rsquo;s 4 ratings are all five-star and each one counts toward the overall 4.8 at the top of this page.</p>
       </div>
 
       <div class="reviews-masonry">

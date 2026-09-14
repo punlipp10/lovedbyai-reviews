@@ -74,7 +74,7 @@
     },
     "Website": {
       "display_order": 4,
-      "in_top_scorecard": true,
+      "in_top_scorecard": false,
       "score": null,
       "scale": null,
       "ratings": null,
@@ -83,11 +83,11 @@
       "source_url": "https://www.lovedby.ai/",
       "verification": "http",
       "verified": "2026-09-07",
-      "note": "First-party testimonials. No verifiable star rating, so this card shows a count only and is excluded from all structured data ratings."
+      "note": "First-party testimonials. No verifiable star rating, so they are excluded from the site-wide aggregate and from all structured-data ratings. Shown in the Testimonials section only."
     },
     "Google": {
       "display_order": 5,
-      "in_top_scorecard": false,
+      "in_top_scorecard": true,
       "score": 5.0,
       "scale": 5,
       "ratings": 4,
@@ -102,7 +102,7 @@
       "source_url": "https://share.google/zmxeJ5ihi3bJ7j5s5",
       "verification": "browser",
       "verified": "2026-09-07",
-      "note": "Deliberately excluded from the top scorecard row and rendered last on the page. 4 ratings, 3 of which carry text."
+      "note": "4 ratings, 3 of which carry text. Counted in the site-wide aggregate at 5 each (replaced the first-party testimonials in the scorecard row on 2026-09-14)."
     }
   },
   "reviews": [
@@ -628,5 +628,39 @@
       "note": "First captured in the ledger at this audit.",
       "superseded_text": null
     }
-  ]
+  ],
+  "aggregate": {
+    "_method": "Straight mean of every independent live review, each counted once at the star rating its own author gave it. Deliberately not a mean of platform scores, and not Trustpilot's weighted TrustScore (Trustpilot publishes 4.0 while all four of its reviews are five-star). First-party testimonials on lovedby.ai are excluded because they carry no rating at source.",
+    "score": 4.8,
+    "exact": 4.75,
+    "scale": 5,
+    "review_count": 16,
+    "points_total": 76,
+    "breakdown": {
+      "WordPress.org": {
+        "n": 5,
+        "points": 22,
+        "detail": "4x5, 1x2"
+      },
+      "G2": {
+        "n": 3,
+        "points": 14,
+        "detail": "4.5, 4.5, 5.0"
+      },
+      "Trustpilot": {
+        "n": 4,
+        "points": 20,
+        "detail": "4x5"
+      },
+      "Google": {
+        "n": 4,
+        "points": 20,
+        "detail": "4x5"
+      }
+    },
+    "excluded": {
+      "Website": "5 first-party testimonials, unrated at source"
+    },
+    "computed": "2026-09-14"
+  }
 }
