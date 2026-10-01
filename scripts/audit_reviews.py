@@ -126,7 +126,9 @@ def website(url="https://www.lovedby.ai/"):
     h = get(url)
     sec = re.search(r'<section id="testimonials".*?(?=<section |</main>)', h, re.S)
     if not sec:
-        return []
+        # lovedby.ai intermittently serves a page without the testimonials
+        # section. Treat that as a failed fetch, not as "every testimonial gone".
+        raise RuntimeError("no #testimonials section in response (flaky fetch?) - re-run")
     out, seen = [], set()
     for fig in re.findall(r"<figure.*?</figure>", sec.group(0), re.S):
         name = re.search(r'text-nws-ink">([^<]+)</span>', fig)

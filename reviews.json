@@ -2,14 +2,14 @@
   "_readme": "Source of truth for lovedbyaireviews.com. Every review the site has ever published lives here. status=live means verified present at source on last_verified; status=archived means it was published once and is no longer at its source (it moves to archive.html). Never hand-edit scores: run scripts/audit_reviews.py or the /review-audit skill.",
   "audit": {
     "cadence": "every 14 days",
-    "last_run": "2026-09-07",
-    "next_due": "2026-09-21",
+    "last_run": "2026-10-01",
+    "next_due": "2026-10-15",
     "method": "WordPress.org + lovedby.ai via scripts/audit_reviews.py (HTTP). G2, Trustpilot and Google require a real browser (they 403 scripted requests) and are captured via the /review-audit skill."
   },
   "product": {
     "name": "LovedByAI",
     "wp_slug": "lovedbyai-seo-for-llms-and-ai-search",
-    "version": "1.7.28",
+    "version": "2.2.0",
     "active_installs": 1000,
     "active_installs_verified": "2026-09-07",
     "source": "https://api.wordpress.org/plugins/info/1.2/"
@@ -50,17 +50,17 @@
       "score_label": null,
       "source_url": "https://www.g2.com/products/lovedbyai-geo-for-wordpress/reviews",
       "verification": "browser",
-      "verified": "2026-09-07",
+      "verified": "2026-10-01",
       "note": "G2 shows per-review scores of 4.5, 4.5 and 5.0. One review is labelled Incentivized (G2 invite)."
     },
     "Trustpilot": {
       "display_order": 3,
       "in_top_scorecard": true,
-      "score": 4.0,
+      "score": 4.1,
       "scale": 5,
-      "ratings": 4,
+      "ratings": 5,
       "distribution": {
-        "5": 4,
+        "5": 5,
         "4": 0,
         "3": 0,
         "2": 0,
@@ -69,8 +69,8 @@
       "score_label": "Great",
       "source_url": "https://www.trustpilot.com/review/lovedby.ai",
       "verification": "browser",
-      "verified": "2026-09-07",
-      "note": "TrustScore is 4.0 even though all four reviews are 5-star: Trustpilot weights recency and volume. Publish 4.0, not a 5.0 average."
+      "verified": "2026-10-01",
+      "note": "TrustScore is 4.1 even though all five reviews are 5-star: Trustpilot weights recency and volume. Publish 4.1, not a 5.0 average."
     },
     "Website": {
       "display_order": 4,
@@ -101,7 +101,7 @@
       "score_label": null,
       "source_url": "https://share.google/zmxeJ5ihi3bJ7j5s5",
       "verification": "browser",
-      "verified": "2026-09-07",
+      "verified": "2026-10-01",
       "note": "4 ratings, 3 of which carry text. Counted in the site-wide aggregate at 5 each (replaced the first-party testimonials in the scorecard row on 2026-09-14)."
     }
   },
@@ -119,7 +119,7 @@
       "status": "live",
       "quoted": true,
       "first_seen": null,
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-01",
       "lost_on": null,
       "note": null,
       "superseded_text": null
@@ -137,7 +137,7 @@
       "status": "live",
       "quoted": false,
       "first_seen": null,
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-01",
       "lost_on": null,
       "note": "Rated 5 stars at source but the text is a complaint about email marketing, not a product review. Counted in the WordPress.org score; not quoted on the page.",
       "superseded_text": null
@@ -155,7 +155,7 @@
       "status": "live",
       "quoted": true,
       "first_seen": null,
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-01",
       "lost_on": null,
       "note": null,
       "superseded_text": null
@@ -173,7 +173,7 @@
       "status": "live",
       "quoted": true,
       "first_seen": null,
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-01",
       "lost_on": null,
       "note": null,
       "superseded_text": null
@@ -191,7 +191,7 @@
       "status": "live",
       "quoted": false,
       "first_seen": null,
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-01",
       "lost_on": null,
       "note": "Negative review. Counted in the WordPress.org score; not quoted on the page.",
       "superseded_text": null
@@ -313,14 +313,14 @@
       "rating": 4.5,
       "date": "2026-05-14",
       "source_url": "https://www.g2.com/products/lovedbyai-geo-for-wordpress/reviews",
-      "body": "The best part is that LovedByAI gives us a clear view of what is happening with AI search. After setup, we could see that 1,000 pages were optimized and started tracking AI mentions, visitors, crawler activities, and page-level interests.\n \n\n The dashboard showed a major increase in mentions, with the trend up 992%. It made AI visibility feel more real. We could see which pages were being picked up, how often crawlers were visiting, and whether mentions and visits were moving in the right direction.",
+      "body": "The best part is that LovedByAI gives us a clear view of what is happening with AI search. After setup, we could see that 1000 pages were optimized and started tracking AI mentions, visitors, crawler activities, and page-level interests.\n \n\n The dashboard showed a major increase in mentions, with the trend up 992%(!) It made AI visibility feel more real. We could see which pages were being picked up, how often crawlers were visiting, and whether mentions and visits were moving in the right direction.",
       "status": "live",
       "quoted": true,
       "first_seen": null,
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-01",
       "lost_on": null,
-      "note": null,
-      "superseded_text": null
+      "note": "Body corrected to the verbatim source text on 2026-10-01; the earlier published version had been silently edited. Body corrected to the verbatim source text on 2026-10-01; the earlier published version had been silently edited.",
+      "superseded_text": "The best part is that LovedByAI gives us a clear view of what is happening with AI search. After setup, we could see that 1,000 pages were optimized and started tracking AI mentions, visitors, crawler activities, and page-level interests.\n \n\n The dashboard showed a major increase in mentions, with the trend up 992%. It made AI visibility feel more real. We could see which pages were being picked up, how often crawlers were visiting, and whether mentions and visits were moving in the right direction."
     },
     {
       "id": "g2-naren-s",
@@ -331,14 +331,14 @@
       "rating": 4.5,
       "date": "2026-05-13",
       "source_url": "https://www.g2.com/products/lovedbyai-geo-for-wordpress/reviews",
-      "body": "I like that LovedByAI gives us a practical way to prepare our WordPress site for AI search without rebuilding pages or changing the visible design. The setup was straightforward and beginner-friendly.\n \n\n It works seamlessly alongside our existing SEO stack, and the analytics make it easier to see whether crawlers or users from platforms like ChatGPT are interacting with our site. The biggest value is that it turns ‘AI visibility’ from a vague concept into something we can actually implement and monitor.",
+      "body": "I like that LovedByAI - GEO for WordPress gives us a practical way to prepare our WordPress site for AI search without rebuilding pages or changing the visible design. The setup was straightforward and beginner-friendly.\n \n\n It works seamlessly alongside our existing SEO stack, and the analytics make it easier to see whether crawlers or users from platforms like ChatGPT are interacting with our site. The biggest value is that it turns ‘AI visibility’ from a vague concept into something we can actually implement and monitor.",
       "status": "live",
       "quoted": true,
       "first_seen": null,
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-01",
       "lost_on": null,
-      "note": null,
-      "superseded_text": null
+      "note": "Body corrected to the verbatim source text on 2026-10-01; the earlier published version had been silently edited.",
+      "superseded_text": "I like that LovedByAI gives us a practical way to prepare our WordPress site for AI search without rebuilding pages or changing the visible design. The setup was straightforward and beginner-friendly.\n \n\n It works seamlessly alongside our existing SEO stack, and the analytics make it easier to see whether crawlers or users from platforms like ChatGPT are interacting with our site. The biggest value is that it turns ‘AI visibility’ from a vague concept into something we can actually implement and monitor."
     },
     {
       "id": "g2-andre-g",
@@ -353,7 +353,7 @@
       "status": "live",
       "quoted": true,
       "first_seen": "2026-09-07",
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-01",
       "lost_on": null,
       "note": "New since last audit. G2 labels this review Incentivized — Source: G2 invite.",
       "superseded_text": null
@@ -385,14 +385,14 @@
       "rating": 5.0,
       "date": "2026-06-22",
       "source_url": "https://www.trustpilot.com/review/lovedby.ai",
-      "body": "I run a WordPress website and wanted a simple way to make the site more understandable for tools like ChatGPT and Perplexity. Installation was straightforward and didn’t conflict with my existing plugins.\n \n\n What I liked most was that I didn’t need to make manual changes to every page. The platform gives useful visibility into AI-focused optimization that I wasn’t getting elsewhere. The onboarding experience and ease of use have been positive so far.",
+      "body": "I heard a lot about LLMs and the new seo that is AI search then i also thought that i must get a tool that can help me with LLM domination and then I got to know about LovedByAI. I run a WordPress website and wanted a simple way to make the site more understandable for tools like ChatGPT and Perplexity. Installation was straightforward and didn’t conflict with my existing plugins.\n \n\n What I liked most was that I didn’t need to make manual changes to every page. The platform gives useful visibility into AI-focused optimization that I wasn’t getting elsewhere. I haven’t been using it long enough to judge the full impact on leads, but the onboarding experience and ease of use have been positive so far.",
       "status": "live",
       "quoted": true,
       "first_seen": null,
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-01",
       "lost_on": null,
-      "note": null,
-      "superseded_text": null
+      "note": "Body corrected to the verbatim source text on 2026-10-01; the earlier published version had been silently edited. Body corrected to the verbatim source text on 2026-10-01; the earlier published version had been silently edited.",
+      "superseded_text": "I run a WordPress website and wanted a simple way to make the site more understandable for tools like ChatGPT and Perplexity. Installation was straightforward and didn’t conflict with my existing plugins.\n \n\n What I liked most was that I didn’t need to make manual changes to every page. The platform gives useful visibility into AI-focused optimization that I wasn’t getting elsewhere. The onboarding experience and ease of use have been positive so far."
     },
     {
       "id": "tp-shlomo-gobi",
@@ -403,14 +403,14 @@
       "rating": 5.0,
       "date": "2026-04-02",
       "source_url": "https://www.trustpilot.com/review/lovedby.ai",
-      "body": "Boosted my web traffic dramatically within a very short time. Extremely satisfied — best investment ever.",
+      "body": "Boosted my web traffic dramatically within a very short time. Extremely satisfied, best investment ever...",
       "status": "live",
       "quoted": true,
       "first_seen": null,
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-01",
       "lost_on": null,
-      "note": null,
-      "superseded_text": null
+      "note": "Body corrected to the verbatim source text on 2026-10-01; the earlier published version had been silently edited.",
+      "superseded_text": "Boosted my web traffic dramatically within a very short time. Extremely satisfied — best investment ever."
     },
     {
       "id": "tp-roeefl",
@@ -421,14 +421,14 @@
       "rating": 5.0,
       "date": "2026-03-22",
       "source_url": "https://www.trustpilot.com/review/lovedby.ai",
-      "body": "As a web dev the whole shift to AI search has been a pain to figure out. Lately I was just pasting my pages into Claude, asking “is this good for AI search?”. I had zero actual visibility into whether I was doing a good job.\n \n\n Getting LovedByAI has been a massive relief. It takes all the guesswork out of it and actually shows me what’s working. I finally don’t have to rely on a chatbot to grade my own homework. It lets me get back to actually building things. Highly recommend.",
+      "body": "As a web dev the whole shift to AI search has been a pain to figure out. Lately I was just pasting my pages into Claude, asking “is this good for AI search?”. I had zero actual visibility into whether I was doing a good job.\n \n\n Getting Loved by AI has been a massive relief. It takes all the guesswork out of it and actually shows me what’s working. I finally don’t have to rely on a chatbot to grade my own homework. It lets me get back to actually building things. Highly recommend.",
       "status": "live",
       "quoted": true,
       "first_seen": null,
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-01",
       "lost_on": null,
-      "note": null,
-      "superseded_text": null
+      "note": "Body corrected to the verbatim source text on 2026-10-01; the earlier published version had been silently edited.",
+      "superseded_text": "As a web dev the whole shift to AI search has been a pain to figure out. Lately I was just pasting my pages into Claude, asking “is this good for AI search?”. I had zero actual visibility into whether I was doing a good job.\n \n\n Getting LovedByAI has been a massive relief. It takes all the guesswork out of it and actually shows me what’s working. I finally don’t have to rely on a chatbot to grade my own homework. It lets me get back to actually building things. Highly recommend."
     },
     {
       "id": "tp-ron-agobi",
@@ -439,13 +439,31 @@
       "rating": 5.0,
       "date": "2026-03-20",
       "source_url": "https://www.trustpilot.com/review/lovedby.ai",
-      "body": "I’m not an SEO person and I definitely don’t know how to get our firm’s website to show up on ChatGPT. LovedByAI was a breath of fresh air. It handles the technical optimizations automatically so I don’t have to think about it.\n \n\n Plug and play is perfect for me. We’ve seen a noticeable uptick in inquiries since we started using it. Worth every penny for the peace of mind alone.",
+      "body": "I’m not an SEO person and I definitely don’t know how to get our firm’s website to show up on ChatGPT. It’s just not my area of practice. LovedByAI was a breath of fresh air. It handles the technical optimizations automatically so I don’t have to think about it.\n \n\n Plug and play is perfect for me. We’ve seen a noticeable uptick in inquiries since we started using it. Worth every penny for the peace of mind alone.",
       "status": "live",
       "quoted": true,
       "first_seen": null,
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-01",
       "lost_on": null,
-      "note": null,
+      "note": "Body corrected to the verbatim source text on 2026-10-01; the earlier published version had been silently edited.",
+      "superseded_text": "I’m not an SEO person and I definitely don’t know how to get our firm’s website to show up on ChatGPT. LovedByAI was a breath of fresh air. It handles the technical optimizations automatically so I don’t have to think about it.\n \n\n Plug and play is perfect for me. We’ve seen a noticeable uptick in inquiries since we started using it. Worth every penny for the peace of mind alone."
+    },
+    {
+      "id": "tp-mike-griss",
+      "platform": "Trustpilot",
+      "title": "LovedByAI turned out to be exactly what we needed.",
+      "author": "Mike Griss",
+      "role": "Portugal — Unprompted",
+      "rating": 5.0,
+      "date": "2026-09-28",
+      "source_url": "https://www.trustpilot.com/review/lovedby.ai",
+      "body": "LovedByAI turned out to be exactly what I needed. It drops a machine-readable layer on top of the site we already had. Visitors see the same design as always. LLM bots suddenly have an easier time reading and parsing the content.\n\nEasy to install, no conflicts, it works just as described.",
+      "status": "live",
+      "quoted": false,
+      "first_seen": "2026-10-01",
+      "last_verified": "2026-10-01",
+      "lost_on": null,
+      "note": "New since last audit. Posted '3 days ago' as of 2026-10-01 (date approximate); experience date July 31, 2026. Counted in the Trustpilot figures and the site-wide aggregate. NOT quoted pending Dean's call: wording closely paraphrases aguelmann's WordPress.org review ('machine-readable layer ... Human visitors see the exact same layout, but LLMs can easily parse').",
       "superseded_text": null
     },
     {
@@ -479,7 +497,7 @@
       "status": "live",
       "quoted": true,
       "first_seen": null,
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-01",
       "lost_on": null,
       "note": "Page previously carried a longer quote than lovedby.ai now shows; body updated to the current verifiable text.",
       "superseded_text": "\"Within 10 days of installation, we saw 300% more impressions and 400% more traffic from AI search. The analytics dashboard shows you exactly which pages AI is picking up.\""
@@ -497,7 +515,7 @@
       "status": "live",
       "quoted": true,
       "first_seen": null,
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-01",
       "lost_on": null,
       "note": null,
       "superseded_text": null
@@ -515,7 +533,7 @@
       "status": "live",
       "quoted": true,
       "first_seen": null,
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-01",
       "lost_on": null,
       "note": "Page previously carried a longer quote than lovedby.ai now shows; body updated to the current verifiable text.",
       "superseded_text": "\"After I installed LovedByAI, my site's popularity grew by 77% and I didn't even change anything. No complicated configuration, no extra workload — real results without constant tweaking.\""
@@ -533,7 +551,7 @@
       "status": "live",
       "quoted": true,
       "first_seen": "2026-09-07",
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-01",
       "lost_on": null,
       "note": "New since last audit.",
       "superseded_text": null
@@ -551,7 +569,7 @@
       "status": "live",
       "quoted": true,
       "first_seen": null,
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-01",
       "lost_on": null,
       "note": "Page previously carried a longer quote than lovedby.ai now shows; body updated to the current verifiable text.",
       "superseded_text": "\"We started showing up in ChatGPT and Claude in 2–3 weeks. Clients are coming through AI search now.\""
@@ -581,13 +599,13 @@
       "author": "Roie Reuveni",
       "role": "Local Guide — 217 reviews",
       "rating": 5.0,
-      "date": "5 months ago",
+      "date": "6 months ago (as of 2026-10-01)",
       "source_url": "https://share.google/zmxeJ5ihi3bJ7j5s5",
       "body": "A product that is actually relevant and at the cutting edge of how AI is effecting our lives online. If you own a business and are not paying attention and using LovedByAI you are loosing touch.",
       "status": "live",
       "quoted": true,
       "first_seen": "2026-09-07",
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-01",
       "lost_on": null,
       "note": "First captured in the ledger at this audit.",
       "superseded_text": null
@@ -599,13 +617,13 @@
       "author": "אורי ישראל (Uri Israel)",
       "role": "Google reviewer",
       "rating": 5.0,
-      "date": "a month ago",
+      "date": "2 months ago (as of 2026-10-01)",
       "source_url": "https://share.google/zmxeJ5ihi3bJ7j5s5",
       "body": "Does the job very well, significantly reduces friction, and provides a lot of quiet. I use it on several of our sites and am very satisfied and recommend it.",
       "status": "live",
       "quoted": true,
       "first_seen": "2026-09-07",
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-01",
       "lost_on": null,
       "note": "Translated by Google from Hebrew.",
       "superseded_text": null
@@ -617,25 +635,25 @@
       "author": "Jonathan Albalak",
       "role": "Google reviewer",
       "rating": 5.0,
-      "date": "5 months ago",
+      "date": "6 months ago (as of 2026-10-01)",
       "source_url": "https://share.google/zmxeJ5ihi3bJ7j5s5",
       "body": "Does what it’s supposed to do, works well",
       "status": "live",
       "quoted": true,
       "first_seen": "2026-09-07",
-      "last_verified": "2026-09-07",
+      "last_verified": "2026-10-01",
       "lost_on": null,
       "note": "First captured in the ledger at this audit.",
       "superseded_text": null
     }
   ],
   "aggregate": {
-    "_method": "Straight mean of every independent live review, each counted once at the star rating its own author gave it. Deliberately not a mean of platform scores, and not Trustpilot's weighted TrustScore (Trustpilot publishes 4.0 while all four of its reviews are five-star). First-party testimonials on lovedby.ai are excluded because they carry no rating at source.",
+    "_method": "Straight mean of every independent live review, each counted once at the star rating its own author gave it. Deliberately not a mean of platform scores, and not Trustpilot's weighted TrustScore (Trustpilot publishes 4.1 while all five of its reviews are five-star). First-party testimonials on lovedby.ai are excluded because they carry no rating at source.",
     "score": 4.8,
-    "exact": 4.75,
+    "exact": 4.7647,
     "scale": 5,
-    "review_count": 16,
-    "points_total": 76,
+    "review_count": 17,
+    "points_total": 81,
     "breakdown": {
       "WordPress.org": {
         "n": 5,
@@ -648,9 +666,9 @@
         "detail": "4.5, 4.5, 5.0"
       },
       "Trustpilot": {
-        "n": 4,
-        "points": 20,
-        "detail": "4x5"
+        "n": 5,
+        "points": 25,
+        "detail": "5x5"
       },
       "Google": {
         "n": 4,
@@ -661,6 +679,6 @@
     "excluded": {
       "Website": "5 first-party testimonials, unrated at source"
     },
-    "computed": "2026-09-14"
+    "computed": "2026-10-01"
   }
 }
