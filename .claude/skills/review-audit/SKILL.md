@@ -22,12 +22,22 @@ that says the same thing today.
    structured data. Its reviews no longer exist at their source; marking them up
    as ratings would be fabricated review markup. Human-readable only.
 5. Trustpilot's **TrustScore is not the mean of its stars** — it weights recency
-   and volume. Publish the TrustScore Trustpilot displays (4.0), never a computed
-   average of the individual reviews (which would read 5.0).
+   and volume. Publish the TrustScore Trustpilot displays (4.1 as of 2026-10-01),
+   never a computed average of the individual reviews (which would read 5.0) as
+   Trustpilot's score.
 6. Website testimonials have no verifiable star rating. They get a **count, not a
-   score**, and stay out of every structured-data rating.
-7. Google stays **out of the top scorecard row** and renders **last** on the page.
-   This is deliberate. Do not "fix" it.
+   score**, and stay out of every structured-data rating and the overall score.
+7. **The overall score** (hero, `.overall-rating` explainer, `aggregateRating`) is
+   a straight mean of every live third-party review — WordPress.org, G2,
+   Trustpilot, Google — each counted once at the rating its own author gave it.
+   Dean chose this on 2026-09-14 and confirmed it on 2026-10-01. Recompute it
+   from the per-review ratings you just read, and keep `reviews.json` →
+   `aggregate` (points, n, breakdown, `computed`) in step. Every live review
+   counts, including unquoted ones (the 2★ and the "spam" 5★ on WordPress.org)
+   and Google's text-less ratings. Never use platform scores or the TrustScore
+   as inputs.
+8. The top scorecard row is WordPress.org, G2, Trustpilot, Google. Website
+   testimonials are not in it. The Google section still renders last.
 
 ## Step 1 — the automated half
 
@@ -114,16 +124,15 @@ python3 scripts/audit_reviews.py --write   # stamps ledger status + next_due
 
 Then, by hand, in `index.html`:
 
-- **Scorecard** (`.platforms-grid`) — WordPress.org, G2, Trustpilot, Website only.
+- **Scorecard** (`.platforms-grid`) — WordPress.org, G2, Trustpilot, Google.
   Each card's score, star row and count must match its platform in `reviews.json`.
   Perfect scores render as `5`, not `5.0`.
 - **Review sections** — quote exactly the `quoted: true` reviews for that platform.
 - **Google section** — last content section before the platform links.
 - **Testimonials** — the `Website` platform entries.
-- **`aggregateRating` in the `@graph`** — WordPress.org's API figure only
-  (`ratingValue` = its score, `ratingCount`/`reviewCount` = its rating count).
-  It is the one rating that is machine-verifiable and it describes the software
-  itself. Never blend platforms into a single invented average.
+- **Overall score** — hero score and count, the `.overall-rating` explainer
+  (per-platform detail, points ÷ n), and `aggregateRating` in the `@graph`
+  (`ratingValue` = rounded mean, `ratingCount`/`reviewCount` = n). See rule 7.
 - **`Review` nodes** — one per `quoted: true` review, with its real per-review
   rating (G2's 4.5s are 4.5, not 5).
 - **`softwareVersion`** — from the API.

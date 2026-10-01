@@ -459,11 +459,11 @@
       "source_url": "https://www.trustpilot.com/review/lovedby.ai",
       "body": "LovedByAI turned out to be exactly what I needed. It drops a machine-readable layer on top of the site we already had. Visitors see the same design as always. LLM bots suddenly have an easier time reading and parsing the content.\n\nEasy to install, no conflicts, it works just as described.",
       "status": "live",
-      "quoted": false,
+      "quoted": true,
       "first_seen": "2026-10-01",
       "last_verified": "2026-10-01",
       "lost_on": null,
-      "note": "New since last audit. Posted '3 days ago' as of 2026-10-01 (date approximate); experience date July 31, 2026. Counted in the Trustpilot figures and the site-wide aggregate. NOT quoted pending Dean's call: wording closely paraphrases aguelmann's WordPress.org review ('machine-readable layer ... Human visitors see the exact same layout, but LLMs can easily parse').",
+      "note": "New since last audit. Posted '3 days ago' as of 2026-10-01 (date approximate); experience date July 31, 2026. Quoted on Dean's decision 2026-10-01, despite wording that closely paraphrases aguelmann's WordPress.org review.",
       "superseded_text": null
     },
     {
