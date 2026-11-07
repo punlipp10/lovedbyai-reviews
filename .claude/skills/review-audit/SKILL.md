@@ -27,7 +27,7 @@ that says the same thing today.
    Trustpilot's score.
 6. Website testimonials have no verifiable star rating. They get a **count, not a
    score**, and stay out of every structured-data rating and the overall score.
-7. **The overall score** (hero, `.overall-rating` explainer, `aggregateRating`) is
+7. **The overall score** (hero score and count, `aggregateRating`) is
    a straight mean of every live third-party review — WordPress.org, G2,
    Trustpilot, Google — each counted once at the rating its own author gave it.
    Dean chose this on 2026-09-14 and confirmed it on 2026-10-01. Recompute it
@@ -130,9 +130,10 @@ Then, by hand, in `index.html`:
 - **Review sections** — quote exactly the `quoted: true` reviews for that platform.
 - **Google section** — last content section before the platform links.
 - **Testimonials** — the `Website` platform entries.
-- **Overall score** — hero score and count, the `.overall-rating` explainer
-  (per-platform detail, points ÷ n), and `aggregateRating` in the `@graph`
+- **Overall score** — hero score and count, and `aggregateRating` in the `@graph`
   (`ratingValue` = rounded mean, `ratingCount`/`reviewCount` = n). See rule 7.
+  The page carries no calculation explainer; Dean removed it on 2026-11-07, so
+  don't add one back.
 - **`Review` nodes** — one per `quoted: true` review, with its real per-review
   rating (G2's 4.5s are 4.5, not 5).
 - **`softwareVersion`** — from the API.
